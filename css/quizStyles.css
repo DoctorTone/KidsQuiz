@@ -5,6 +5,21 @@
     margin: 0;
     overflow: hidden;
 }
+/* Fonts */
+@font-face {
+    font-family: 'salsaregular';
+    src: url('../fonts/salsa-regular-webfont.woff2') format('woff2'),
+    url('../fonts/salsa-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'happy_monkeyregular';
+    src: url('../fonts/happymonkey-regular-webfont.woff2') format('woff2'),
+    url('../fonts/happymonkey-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
     background-color: black;
@@ -12,12 +27,17 @@ body {
 .mainTitle {
     margin: 1%;
 }
-.mainTitle p {
+.mainTitle span {
     font-size: 2vw;
+    font-family: 'salsaregular';
     color: white;
+}
+.mainTitle img {
+    width: 12.5%;
 }
 .instructions p {
     font-size: 1.2vw;
+    font-family: 'happy_monkeyregular';
     color: white;
 }
 .noDisplay {
@@ -39,4 +59,14 @@ body {
     top: 25%;
     left: 33.333%;
     width: 33.333%;
+}
+.progress {
+    margin: 0 20%;
+}
+.questionContainer {
+    margin: 2% 0 1% 10%;
+}
+.questionContainer p {
+    font-size: 1.6vw;
+    color: white;
 }

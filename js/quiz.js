@@ -6,5 +6,7 @@
 
 $(document).ready( ()=> {
     //Init quiz
-
+    $('#playGame').on("click", ()=> {
+        window.location.href = "questions.html";
+    })
 });
