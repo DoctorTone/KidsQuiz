@@ -70,3 +70,12 @@ body {
     font-size: 1.6vw;
     color: white;
 }
+.questionImage img {
+    position: absolute;
+    top: 1%;
+    left: 0;
+    width: 40%;
+}
+.row {
+    margin-bottom: 5%;
+}
