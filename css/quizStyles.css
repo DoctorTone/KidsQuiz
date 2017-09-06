@@ -25,7 +25,7 @@ body {
     background-color: black;
 }
 .mainTitle {
-    margin: 1%;
+    margin: 5%;
 }
 .mainTitle span {
     font-size: 2vw;
@@ -34,6 +34,9 @@ body {
 }
 .mainTitle img {
     width: 12.5%;
+}
+.instructions {
+    margin-top: 5%;
 }
 .instructions p {
     font-size: 1.2vw;
@@ -78,4 +81,10 @@ body {
 }
 .row {
     margin-bottom: 5%;
+}
+#playContainer {
+    margin-top: 5%;
+}
+#playContainer img {
+    width: 15%;
 }
