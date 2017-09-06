@@ -24,6 +24,9 @@
 body {
     background-color: black;
 }
+.indent {
+    margin-left: 10%;
+}
 .mainTitle {
     margin: 5%;
 }
@@ -67,7 +70,7 @@ body {
     margin: 0 20%;
 }
 .questionContainer {
-    margin: 2% 0 1% 10%;
+    margin: 6% 0 1% 20%;
 }
 .questionContainer p {
     font-size: 1.6vw;
