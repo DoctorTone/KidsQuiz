@@ -13,6 +13,13 @@ class QuestionManager {
         this.timerRunning = true;
     }
 
+    start() {
+        this.setupNextQuestion();
+        this.quizTimer = setInterval( () => {
+            this.updateTimer();
+        }, this.updateTime);
+    }
+
     getUpdateTime() {
         return this.updateTime;
     }
@@ -78,6 +85,7 @@ class QuestionManager {
         elem.attr("src", "images/oopsRedButton.png");
         elem.show();
         this.clearTimer();
+        $('#restartContainer').show();
     }
 
     checkAnswer(answerID) {
@@ -94,16 +102,24 @@ class QuestionManager {
             this.stopGame(answer);
         }
     }
+
+    restart() {
+        $('#restartContainer').hide();
+        this.clearAnswers();
+        clearInterval(this.quizTimer);
+    }
 }
 
 $(document).ready( ()=> {
     let qManager = new QuestionManager();
-    qManager.setupNextQuestion();
-    setInterval( () => {
-        qManager.updateTimer();
-    }, qManager.getUpdateTime());
+    qManager.start();
 
     $('[id^="clickAnswer"]').on("click", function() {
         qManager.checkAnswer(this.id);
+    });
+
+    $('#restart').on("click", () => {
+        qManager.restart();
+        window.location.href = "quiz.html";
     });
 });

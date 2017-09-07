@@ -92,3 +92,12 @@ body {
 #playContainer img {
     width: 12.5%;
 }
+#restartContainer {
+    bottom: 20%;
+    left: 33%;
+    width: 33%;
+}
+#restartContainer p {
+    color: white;
+    font-size: 1.2vw;
+}
