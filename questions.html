@@ -10,16 +10,17 @@
 
     <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/questions.js?v=0.2"></script>
+    <script type="text/javascript" src="js/questionText.js"></script>
+    <script type="text/javascript" src="js/questions.js?v=0.3"></script>
 
 </head>
 <body>
     <div class="mainTitle centred">
-        <span>Question 1 - What is the capital of England?</span>
+        <p>Question <span id="questionNumber"></span> - <span id="questionText"></span></p>
     </div>
 
     <div class="progress centred">
-        <div class="progress-bar">
+        <div id="progressBar" class="progress-bar">
         </div>
     </div>
 
@@ -30,7 +31,7 @@
                     <p>1.</p>
                 </div>
                 <div class="col-md-6">
-                    <p>London</p>
+                    <p id="answer0"></p>
                 </div>
                 <div class="col-md-2 questionImage">
                     <img src="images/square.png">
@@ -43,7 +44,7 @@
                     <p>2.</p>
                 </div>
                 <div class="col-md-6">
-                    <p>Paris</p>
+                    <p id="answer1"></p>
                 </div>
                 <div class="col-md-2 questionImage">
                     <img src="images/square.png">
@@ -56,7 +57,7 @@
                     <p>3.</p>
                 </div>
                 <div class="col-md-6">
-                    <p>New York</p>
+                    <p id="answer2"></p>
                 </div>
                 <div class="col-md-2 questionImage">
                     <img src="images/square.png">

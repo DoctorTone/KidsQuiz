@@ -30,6 +30,7 @@ body {
 .mainTitle {
     margin: 5%;
 }
+.mainTitle p,
 .mainTitle span {
     font-size: 2vw;
     font-family: 'salsaregular';
