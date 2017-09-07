@@ -11,6 +11,7 @@ class QuestionManager {
         this.totalTime = 30 * 1000;
         this.questionWaitTime = 3 * 1000;
         this.timerRunning = true;
+        this.timerMargin = this.updateTime * 5;
     }
 
     start() {
@@ -30,9 +31,15 @@ class QuestionManager {
         this.currentTime += this.updateTime;
         let progress = (this.currentTime / this.totalTime) * 100;
         $('#progressBar').width(progress + "%");
-        if(this.currentTime >= this.totalTime) {
-            console.log("Timeout!");
+        if(this.currentTime > (this.totalTime + this.timerMargin)) {
+            this.timeOut();
+            this.stopGame();
         }
+    }
+
+    timeOut() {
+        this.timerRunning = false;
+        $('#timeOut').show();
     }
 
     clearTimer() {
@@ -47,6 +54,7 @@ class QuestionManager {
             $('#answerWrong' + i).hide();
             $('#clickResponse' + i).hide();
         }
+        $('#nextQuestion').hide();
     }
 
     setupNextQuestion() {
@@ -74,6 +82,7 @@ class QuestionManager {
         let elem = $('#clickResponse' + answer);
         elem.attr("src", "images/greatGreenButton.png");
         elem.show();
+        $('#nextQuestion').show();
         this.clearTimer();
         setTimeout( () => {
             this.nextQuestion();
@@ -81,10 +90,13 @@ class QuestionManager {
     }
 
     stopGame(answer) {
-        let elem = $('#clickResponse' + answer);
-        elem.attr("src", "images/oopsRedButton.png");
-        elem.show();
-        this.clearTimer();
+        if(answer) {
+            let elem = $('#clickResponse' + answer);
+            elem.attr("src", "images/oopsRedButton.png");
+            elem.show();
+            this.clearTimer();
+        }
+
         $('#restartContainer').show();
     }
 
@@ -113,6 +125,14 @@ class QuestionManager {
 $(document).ready( ()=> {
     let qManager = new QuestionManager();
     qManager.start();
+
+    let sound = new Howl(
+        {
+            src: ["./sounds/sound2.mp3"]
+        }
+    );
+
+    sound.play();
 
     $('[id^="clickAnswer"]').on("click", function() {
         qManager.checkAnswer(this.id);

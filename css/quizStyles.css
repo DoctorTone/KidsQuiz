@@ -101,3 +101,19 @@ body {
     color: white;
     font-size: 1.2vw;
 }
+#timeOut {
+    top: 18%;
+    left: 40%;
+    width: 20%;
+}
+#timeOut img {
+    width: 75%;
+}
+#nextQuestion {
+    bottom: 18%;
+    left: 42.5%;
+    width: 12.5%;
+}
+#nextQuestion img {
+    width: 100%;
+}
