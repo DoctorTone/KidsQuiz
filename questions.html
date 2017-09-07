@@ -11,7 +11,7 @@
     <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/questionText.js"></script>
-    <script type="text/javascript" src="js/questions.js?v=0.3"></script>
+    <script type="text/javascript" src="js/questions.js?v=0.4"></script>
 
 </head>
 <body>
@@ -31,12 +31,15 @@
                     <p>1.</p>
                 </div>
                 <div class="col-md-6">
-                    <p id="answer0"></p>
+                    <p id="answerText0"></p>
                 </div>
-                <div class="col-md-2 questionImage">
+                <div id="clickAnswer0" class="col-md-2 questionImage">
                     <img src="images/square.png">
-                    <img class="noDisplay" src="images/tick.png">
-                    <img class="noDisplay" src="images/cross.png">
+                    <img id="answerCorrect0" class="noDisplay" src="images/tick.png">
+                    <img id="answerWrong0" class="noDisplay" src="images/cross.png">
+                </div>
+                <div class="col-md-1">
+                    <img id="clickResponse0" class="noDisplay" src="images/greatGreenButton.png">
                 </div>
             </div>
             <div class="row">
@@ -44,12 +47,15 @@
                     <p>2.</p>
                 </div>
                 <div class="col-md-6">
-                    <p id="answer1"></p>
+                    <p id="answerText1"></p>
                 </div>
-                <div class="col-md-2 questionImage">
+                <div id="clickAnswer1" class="col-md-2 questionImage">
                     <img src="images/square.png">
-                    <img class="noDisplay" src="images/tick.png">
-                    <img class="noDisplay" src="images/cross.png">
+                    <img id="answerCorrect1" class="noDisplay" src="images/tick.png">
+                    <img id="answerWrong1" class="noDisplay" src="images/cross.png">
+                </div>
+                <div class="col-md-1">
+                    <img id="clickResponse1" class="noDisplay" src="images/greatGreenButton.png">
                 </div>
             </div>
             <div class="row">
@@ -57,12 +63,15 @@
                     <p>3.</p>
                 </div>
                 <div class="col-md-6">
-                    <p id="answer2"></p>
+                    <p id="answerText2"></p>
                 </div>
-                <div class="col-md-2 questionImage">
+                <div id="clickAnswer2" class="col-md-2 questionImage">
                     <img src="images/square.png">
-                    <img class="noDisplay" src="images/tick.png">
-                    <img class="noDisplay" src="images/cross.png">
+                    <img id="answerCorrect2" class="noDisplay" src="images/tick.png">
+                    <img id="answerWrong2" class="noDisplay" src="images/cross.png">
+                </div>
+                <div class="col-md-1">
+                    <img id="clickResponse2" class="noDisplay" src="images/greatGreenButton.png">
                 </div>
             </div>
         </div>
