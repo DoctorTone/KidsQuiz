@@ -73,6 +73,13 @@ class QuestionManager {
         }, this.questionWaitTime);
     }
 
+    stopGame(answer) {
+        let elem = $('#clickResponse' + answer);
+        elem.attr("src", "images/oopsRedButton.png");
+        elem.show();
+        this.clearTimer();
+    }
+
     checkAnswer(answerID) {
         //Get answer number
         let answer = answerID.match(/\d/g);
@@ -83,6 +90,8 @@ class QuestionManager {
         correct ? $('#answerCorrect' + answer).show() : $('#answerWrong' + answer).show();
         if(correct) {
             this.showCorrectResponse(answer);
+        } else {
+            this.stopGame(answer);
         }
     }
 }
