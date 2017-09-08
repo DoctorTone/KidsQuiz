@@ -28,7 +28,7 @@ body {
     margin-left: 10%;
 }
 .mainTitle {
-    margin: 5%;
+    margin-top: 15vh;
 }
 .mainTitle p,
 .mainTitle span {
@@ -40,10 +40,10 @@ body {
     width: 12.5%;
 }
 .instructions {
-    margin-top: 5%;
+    margin-top: 5vh;
 }
 .instructions p {
-    font-size: 1.2vw;
+    font-size: 1.5vw;
     font-family: 'happy_monkeyregular';
     color: white;
 }
@@ -91,7 +91,7 @@ body {
     margin-bottom: 7.5%;
 }
 #playContainer {
-    margin-top: 3%;
+    margin-top: 5vh;
 }
 #playContainer img {
     width: 12.5%;
