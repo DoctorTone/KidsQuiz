@@ -55,7 +55,7 @@ class QuestionManager {
         for(let i=0; i<this.numAnswers; ++i) {
             $('#answerCorrect' + i).hide();
             $('#answerWrong' + i).hide();
-            $('#clickResponse' + i).hide();
+            $('#clickResponse' + i).attr("src", "images/holder.png");
         }
         $('#getReady').hide();
     }
@@ -114,6 +114,11 @@ class QuestionManager {
     displayAnswers() {
         $('#quiz').hide();
         $('#numAnswers').html(this.correctAnswers);
+        let elem = $('#plural');
+        elem.show();
+        if(this.correctAnswers === 1) {
+            elem.hide()
+        }
         $('#summary').show();
     }
 
@@ -134,7 +139,6 @@ class QuestionManager {
     }
 
     restart() {
-        $('#restartContainer').show();
         this.clearAnswers();
         clearInterval(this.quizTimer);
     }
@@ -144,11 +148,19 @@ $(document).ready( ()=> {
     let qManager = new QuestionManager();
     qManager.start();
 
+    let trot = new Howl(
+        {
+            src: ["./sounds/horseTrot.wav"],
+            autoplay: true,
+            loop: true
+        }
+    );
+
     $('[id^="clickAnswer"]').on("click", function() {
         qManager.checkAnswer(this.id);
     });
 
-    $('#restart').on("click", () => {
+    $('#tryAgain').on("click", () => {
         qManager.restart();
         window.location.href = "quiz.html";
     });

@@ -6,12 +6,23 @@
 
 
 $(document).ready( () => {
-    let sound = new Howl(
+    let snort = new Howl(
+        {
+            src: ["./sounds/horse-snort.wav"],
+            autoplay: true
+        }
+    );
+    let whinny = new Howl(
         {
             src: ["./sounds/horse-whinny.wav"]
         }
     );
 
-    sound.play();
+    $('#play').on("click", () => {
+        whinny.play();
+        whinny.on("end", () => {
+            window.location.href = "questions.html";
+        });
+    });
 });
 

@@ -84,6 +84,9 @@ body {
     left: 0;
     width: 100%;
 }
+.responseImage {
+    margin-top: 1.5%;
+}
 .row {
     margin-bottom: 7.5%;
 }
@@ -122,4 +125,7 @@ body {
     color: white;
     padding: 10%;
     font-family: "happy_monkeyregular";
+}
+#summary img {
+    width: 20%;
 }

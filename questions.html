@@ -12,7 +12,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/questionText.js"></script>
     <script type="text/javascript" src="js/howler.min.js"></script>
-    <script type="text/javascript" src="js/questions.js?v=0.7"></script>
+    <script type="text/javascript" src="js/questions.js?v=0.9"></script>
 
 </head>
 <body>
@@ -41,8 +41,8 @@
                         <img id="answerCorrect0" class="noDisplay" src="images/tick.png">
                         <img id="answerWrong0" class="noDisplay" src="images/cross.png">
                     </div>
-                    <div class="col-md-2">
-                        <img id="clickResponse0" class="noDisplay" src="images/greatGreenButton.png">
+                    <div class="col-md-2 responseImage">
+                        <img id="clickResponse0" src="images/holder.png">
                     </div>
                 </div>
                 <div class="row">
@@ -57,8 +57,8 @@
                         <img id="answerCorrect1" class="noDisplay" src="images/tick.png">
                         <img id="answerWrong1" class="noDisplay" src="images/cross.png">
                     </div>
-                    <div class="col-md-2">
-                        <img id="clickResponse1" class="noDisplay" src="images/greatGreenButton.png">
+                    <div class="col-md-2 responseImage">
+                        <img id="clickResponse1" src="images/holder.png">
                     </div>
                 </div>
                 <div class="row">
@@ -73,8 +73,8 @@
                         <img id="answerCorrect2" class="noDisplay" src="images/tick.png">
                         <img id="answerWrong2" class="noDisplay" src="images/cross.png">
                     </div>
-                    <div class="col-md-2">
-                        <img id="clickResponse2" class="noDisplay" src="images/greatGreenButton.png">
+                    <div class="col-md-2 responseImage">
+                        <img id="clickResponse2" src="images/holder.png">
                     </div>
                 </div>
             </div>
@@ -84,7 +84,8 @@
     <div id="summary" class="noDisplay centred">
         <p>You correctly answered</p>
         <p id="numAnswers"></p>
-        <p>questions in a row!!</p>
+        <p>question<span id="plural">s</span> in a row!!</p>
+        <img id="tryAgain" src="images/tryAgainButton.png">
     </div>
 
     <div id="restartContainer" class="infoPanel centred noDisplay">
