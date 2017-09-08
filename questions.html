@@ -16,67 +16,75 @@
 
 </head>
 <body>
-    <div class="mainTitle centred">
-        <p>Question <span id="questionNumber"></span> - <span id="questionText"></span></p>
-    </div>
+    <div id="quiz">
+        <div class="mainTitle centred">
+            <p>Question <span id="questionNumber"></span> - <span id="questionText"></span></p>
+        </div>
 
 
-    <div class="progress centred">
-        <div id="progressBar" class="progress-bar">
+        <div class="progress centred">
+            <div id="progressBar" class="progress-bar">
+            </div>
+        </div>
+
+        <div class="questionContainer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-1 centred">
+                        <p>1.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p id="answerText0"></p>
+                    </div>
+                    <div id="clickAnswer0" class="col-md-1 questionImage">
+                        <img src="images/square.png">
+                        <img id="answerCorrect0" class="noDisplay" src="images/tick.png">
+                        <img id="answerWrong0" class="noDisplay" src="images/cross.png">
+                    </div>
+                    <div class="col-md-2">
+                        <img id="clickResponse0" class="noDisplay" src="images/greatGreenButton.png">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1 centred">
+                        <p>2.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p id="answerText1"></p>
+                    </div>
+                    <div id="clickAnswer1" class="col-md-1 questionImage">
+                        <img src="images/square.png">
+                        <img id="answerCorrect1" class="noDisplay" src="images/tick.png">
+                        <img id="answerWrong1" class="noDisplay" src="images/cross.png">
+                    </div>
+                    <div class="col-md-2">
+                        <img id="clickResponse1" class="noDisplay" src="images/greatGreenButton.png">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1 centred">
+                        <p>3.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p id="answerText2"></p>
+                    </div>
+                    <div id="clickAnswer2" class="col-md-1 questionImage">
+                        <img src="images/square.png">
+                        <img id="answerCorrect2" class="noDisplay" src="images/tick.png">
+                        <img id="answerWrong2" class="noDisplay" src="images/cross.png">
+                    </div>
+                    <div class="col-md-2">
+                        <img id="clickResponse2" class="noDisplay" src="images/greatGreenButton.png">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="questionContainer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-1 centred">
-                    <p>1.</p>
-                </div>
-                <div class="col-md-4">
-                    <p id="answerText0"></p>
-                </div>
-                <div id="clickAnswer0" class="col-md-1 questionImage">
-                    <img src="images/square.png">
-                    <img id="answerCorrect0" class="noDisplay" src="images/tick.png">
-                    <img id="answerWrong0" class="noDisplay" src="images/cross.png">
-                </div>
-                <div class="col-md-2">
-                    <img id="clickResponse0" class="noDisplay" src="images/greatGreenButton.png">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-1 centred">
-                    <p>2.</p>
-                </div>
-                <div class="col-md-4">
-                    <p id="answerText1"></p>
-                </div>
-                <div id="clickAnswer1" class="col-md-1 questionImage">
-                    <img src="images/square.png">
-                    <img id="answerCorrect1" class="noDisplay" src="images/tick.png">
-                    <img id="answerWrong1" class="noDisplay" src="images/cross.png">
-                </div>
-                <div class="col-md-2">
-                    <img id="clickResponse1" class="noDisplay" src="images/greatGreenButton.png">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-1 centred">
-                    <p>3.</p>
-                </div>
-                <div class="col-md-4">
-                    <p id="answerText2"></p>
-                </div>
-                <div id="clickAnswer2" class="col-md-1 questionImage">
-                    <img src="images/square.png">
-                    <img id="answerCorrect2" class="noDisplay" src="images/tick.png">
-                    <img id="answerWrong2" class="noDisplay" src="images/cross.png">
-                </div>
-                <div class="col-md-2">
-                    <img id="clickResponse2" class="noDisplay" src="images/greatGreenButton.png">
-                </div>
-            </div>
-        </div>
+    <div id="summary" class="noDisplay centred">
+        <p>You correctly answered</p>
+        <p id="numAnswers"></p>
+        <p>questions in a row!!</p>
     </div>
 
     <div id="restartContainer" class="infoPanel centred noDisplay">

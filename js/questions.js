@@ -14,6 +14,7 @@ class QuestionManager {
         this.timerMargin = this.updateTime * 5;
         this.readyWaitTime = 1.5 * 1000;
         this.restartWaitTime = 1.5 * 1000;
+        this.correctAnswers = 0;
     }
 
     start() {
@@ -86,7 +87,7 @@ class QuestionManager {
         elem.show();
         this.clearTimer();
         setTimeout( () => {
-            this.getReady();
+            this.nextQuestion();
         }, this.readyWaitTime);
     }
 
@@ -106,8 +107,14 @@ class QuestionManager {
         }
 
         setTimeout( () => {
-            this.restart();
+            this.displayAnswers();
         }, this.restartWaitTime);
+    }
+
+    displayAnswers() {
+        $('#quiz').hide();
+        $('#numAnswers').html(this.correctAnswers);
+        $('#summary').show();
     }
 
     checkAnswer(answerID) {
@@ -119,6 +126,7 @@ class QuestionManager {
         let correct = answer === correctAnswer;
         correct ? $('#answerCorrect' + answer).show() : $('#answerWrong' + answer).show();
         if(correct) {
+            ++this.correctAnswers;
             this.showCorrectResponse(answer);
         } else {
             this.stopGame(answer);

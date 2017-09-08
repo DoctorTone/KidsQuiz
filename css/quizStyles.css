@@ -117,3 +117,9 @@ body {
 #getReady img {
     width: 100%;
 }
+#summary {
+    font-size: 3vw;
+    color: white;
+    padding: 10%;
+    font-family: "happy_monkeyregular";
+}
