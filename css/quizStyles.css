@@ -71,9 +71,10 @@ body {
     margin: 0 20%;
 }
 .questionContainer {
-    margin: 6% 0 1% 20%;
+    margin: 3% 0 1% 30%;
 }
 .questionContainer p {
+    font-family: "happy_monkeyregular";
     font-size: 1.6vw;
     color: white;
 }
@@ -81,10 +82,10 @@ body {
     position: absolute;
     top: 1%;
     left: 0;
-    width: 40%;
+    width: 100%;
 }
 .row {
-    margin-bottom: 5%;
+    margin-bottom: 7.5%;
 }
 #playContainer {
     margin-top: 3%;
@@ -93,13 +94,12 @@ body {
     width: 12.5%;
 }
 #restartContainer {
-    bottom: 20%;
-    left: 33%;
-    width: 33%;
+    top: 40%;
+    left: 42.5%;
+    width: 12.5%;
 }
-#restartContainer p {
-    color: white;
-    font-size: 1.2vw;
+#restartContainer img {
+    width: 100%;
 }
 #timeOut {
     top: 18%;
@@ -109,11 +109,11 @@ body {
 #timeOut img {
     width: 75%;
 }
-#nextQuestion {
-    bottom: 18%;
+#getReady {
+    top: 40%;
     left: 42.5%;
     width: 12.5%;
 }
-#nextQuestion img {
+#getReady img {
     width: 100%;
 }

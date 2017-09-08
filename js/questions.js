@@ -12,6 +12,8 @@ class QuestionManager {
         this.questionWaitTime = 3 * 1000;
         this.timerRunning = true;
         this.timerMargin = this.updateTime * 5;
+        this.readyWaitTime = 1.5 * 1000;
+        this.restartWaitTime = 1.5 * 1000;
     }
 
     start() {
@@ -54,7 +56,7 @@ class QuestionManager {
             $('#answerWrong' + i).hide();
             $('#clickResponse' + i).hide();
         }
-        $('#nextQuestion').hide();
+        $('#getReady').hide();
     }
 
     setupNextQuestion() {
@@ -82,22 +84,30 @@ class QuestionManager {
         let elem = $('#clickResponse' + answer);
         elem.attr("src", "images/greatGreenButton.png");
         elem.show();
-        $('#nextQuestion').show();
         this.clearTimer();
         setTimeout( () => {
+            this.getReady();
+        }, this.readyWaitTime);
+    }
+
+    getReady() {
+        $('#getReady').show();
+        setTimeout( () => {
             this.nextQuestion();
-        }, this.questionWaitTime);
+         }, this.questionWaitTime);
     }
 
     stopGame(answer) {
-        if(answer) {
+        if(answer !== undefined) {
             let elem = $('#clickResponse' + answer);
             elem.attr("src", "images/oopsRedButton.png");
             elem.show();
             this.clearTimer();
         }
 
-        $('#restartContainer').show();
+        setTimeout( () => {
+            this.restart();
+        }, this.restartWaitTime);
     }
 
     checkAnswer(answerID) {
@@ -116,7 +126,7 @@ class QuestionManager {
     }
 
     restart() {
-        $('#restartContainer').hide();
+        $('#restartContainer').show();
         this.clearAnswers();
         clearInterval(this.quizTimer);
     }
@@ -125,14 +135,6 @@ class QuestionManager {
 $(document).ready( ()=> {
     let qManager = new QuestionManager();
     qManager.start();
-
-    let sound = new Howl(
-        {
-            src: ["./sounds/sound2.mp3"]
-        }
-    );
-
-    sound.play();
 
     $('[id^="clickAnswer"]').on("click", function() {
         qManager.checkAnswer(this.id);
