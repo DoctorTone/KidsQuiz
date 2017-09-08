@@ -2,6 +2,8 @@
  * Created by DrTone on 11/04/2017.
  */
 
+let trot;
+
 class QuestionManager {
     constructor() {
         this.currentQuestion = 0;
@@ -47,6 +49,7 @@ class QuestionManager {
 
     clearTimer() {
         this.timerRunning = false;
+        trot.stop();
         this.currentTime = 0;
         $('#progressBar').width("0%");
     }
@@ -77,6 +80,7 @@ class QuestionManager {
     nextQuestion() {
         ++this.currentQuestion;
         this.timerRunning = true;
+        trot.play();
         this.clearAnswers();
         this.setupNextQuestion();
     }
@@ -148,7 +152,7 @@ $(document).ready( ()=> {
     let qManager = new QuestionManager();
     qManager.start();
 
-    let trot = new Howl(
+    trot = new Howl(
         {
             src: ["./sounds/horseTrot.wav"],
             autoplay: true,
