@@ -3,6 +3,7 @@
  */
 
 let trot;
+let soundManager;
 
 class QuestionManager {
     constructor() {
@@ -137,7 +138,9 @@ class QuestionManager {
         if(correct) {
             ++this.correctAnswers;
             this.showCorrectResponse(answer);
+            soundManager.playSound("horse-correct");
         } else {
+            soundManager.playSound("horse-wrong");
             this.stopGame(answer);
         }
     }
@@ -159,6 +162,9 @@ $(document).ready( ()=> {
             loop: true
         }
     );
+
+    soundManager = new SoundManager();
+    soundManager.loadSounds(["horse-correct", "horse-wrong"]);
 
     $('[id^="clickAnswer"]').on("click", function() {
         qManager.checkAnswer(this.id);
