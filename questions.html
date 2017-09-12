@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <title>Questions</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css?v=0.1">
     <link href="css/quizStyles.css?v=0.1" rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
@@ -18,63 +17,69 @@
 </head>
 <body>
     <div id="quiz">
-        <div class="mainTitle centred">
-            <p>Question <span id="questionNumber"></span> - <span id="questionText"></span></p>
-        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xxs-12">
+                    <div class="mainTitle centred">
+                        <p>Question <span id="questionNumber"></span> - <span id="questionText"></span></p>
+                    </div>
 
-        <div class="progress centred">
-            <div id="progressBar" class="progress-bar">
-            </div>
-        </div>
+                    <div class="progress centred">
+                        <div id="progressBar" class="progress-bar">
+                        </div>
+                    </div>
 
-        <div class="questionContainer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-1 centred">
-                        <p>1.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <p id="answerText0"></p>
-                    </div>
-                    <div id="clickAnswer0" class="col-md-1 questionImage">
-                        <img src="images/square.png">
-                        <img id="answerCorrect0" class="noDisplay" src="images/tick.png">
-                        <img id="answerWrong0" class="noDisplay" src="images/cross.png">
-                    </div>
-                    <div class="col-md-2 responseImage">
-                        <img id="clickResponse0" src="images/holder.png">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-1 centred">
-                        <p>2.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <p id="answerText1"></p>
-                    </div>
-                    <div id="clickAnswer1" class="col-md-1 questionImage">
-                        <img src="images/square.png">
-                        <img id="answerCorrect1" class="noDisplay" src="images/tick.png">
-                        <img id="answerWrong1" class="noDisplay" src="images/cross.png">
-                    </div>
-                    <div class="col-md-2 responseImage">
-                        <img id="clickResponse1" src="images/holder.png">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-1 centred">
-                        <p>3.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <p id="answerText2"></p>
-                    </div>
-                    <div id="clickAnswer2" class="col-md-1 questionImage">
-                        <img src="images/square.png">
-                        <img id="answerCorrect2" class="noDisplay" src="images/tick.png">
-                        <img id="answerWrong2" class="noDisplay" src="images/cross.png">
-                    </div>
-                    <div class="col-md-2 responseImage">
-                        <img id="clickResponse2" src="images/holder.png">
+                    <div class="questionContainer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xxs-1 centred">
+                                    <p>1.</p>
+                                </div>
+                                <div class="col-xxs-4">
+                                    <p id="answerText0"></p>
+                                </div>
+                                <div id="clickAnswer0" class="col-xxs-1 questionImage">
+                                    <img src="images/square.png">
+                                    <img id="answerCorrect0" class="noDisplay" src="images/tick.png">
+                                    <img id="answerWrong0" class="noDisplay" src="images/cross.png">
+                                </div>
+                                <div class="col-xxs-2 responseImage">
+                                    <img id="clickResponse0" src="images/holder.png">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xxs-1 centred">
+                                    <p>2.</p>
+                                </div>
+                                <div class="col-xxs-4">
+                                    <p id="answerText1"></p>
+                                </div>
+                                <div id="clickAnswer1" class="col-xxs-1 questionImage">
+                                    <img src="images/square.png">
+                                    <img id="answerCorrect1" class="noDisplay" src="images/tick.png">
+                                    <img id="answerWrong1" class="noDisplay" src="images/cross.png">
+                                </div>
+                                <div class="col-xxs-2 responseImage">
+                                    <img id="clickResponse1" src="images/holder.png">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xxs-1 centred">
+                                    <p>3.</p>
+                                </div>
+                                <div class="col-xxs-4">
+                                    <p id="answerText2"></p>
+                                </div>
+                                <div id="clickAnswer2" class="col-xxs-1 questionImage">
+                                    <img src="images/square.png">
+                                    <img id="answerCorrect2" class="noDisplay" src="images/tick.png">
+                                    <img id="answerWrong2" class="noDisplay" src="images/cross.png">
+                                </div>
+                                <div class="col-xxs-2 responseImage">
+                                    <img id="clickResponse2" src="images/holder.png">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
