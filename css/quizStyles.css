@@ -152,3 +152,38 @@ body {
         margin-top: 2vh;
     }
 }
+@media (min-width: 768px) {
+    .mainTitle {
+        margin-top: 15vh;
+    }
+    .mainTitle img {
+        width: 25%;
+    }
+    .instructions p {
+        font-size: 3vw;
+    }
+    #playContainer img {
+        width: 25%;
+    }
+    #playContainer {
+        margin-top: 7vh;
+    }
+}
+@media (min-width: 1200px) {
+    .mainTitle {
+        margin-top: 5vh;
+    }
+    .mainTitle p,
+    .mainTitle span {
+        font-size: 2.5vw;
+    }
+    .instructions p {
+        font-size: 2vw;
+    }
+    .instructions {
+        margin-top: 3vh;
+    }
+    #playContainer img {
+        width: 18.5%;
+    }
+}
