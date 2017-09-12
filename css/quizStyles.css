@@ -24,26 +24,30 @@
 body {
     background-color: black;
 }
+.page-wrapper {
+    height: 100vh;
+}
 .indent {
     margin-left: 10%;
 }
 .mainTitle {
-    margin-top: 15vh;
+    margin-top: 5vh;
 }
 .mainTitle p,
 .mainTitle span {
-    font-size: 2vw;
+    font-size: 4vw;
     font-family: 'salsaregular';
     color: white;
 }
 .mainTitle img {
-    width: 12.5%;
+    width: 25%;
 }
 .instructions {
-    margin-top: 5vh;
+    margin: 7vh 0 7vh 0;
 }
+
 .instructions p {
-    font-size: 1.5vw;
+    font-size: 4vw;
     font-family: 'happy_monkeyregular';
     color: white;
 }
@@ -87,14 +91,11 @@ body {
 .responseImage {
     margin-top: 1.5%;
 }
-.row {
-    margin-bottom: 7.5%;
-}
 #playContainer {
-    margin-top: 5vh;
+    margin-top: 9vh;
 }
 #playContainer img {
-    width: 12.5%;
+    width: 25%;
 }
 #restartContainer {
     top: 40%;
@@ -128,4 +129,26 @@ body {
 }
 #summary img {
     width: 20%;
+}
+/* Media queries */
+@media (min-width: 568px) {
+    .mainTitle p,
+    .mainTitle span {
+        font-size: 3vw;
+    }
+    .mainTitle img {
+        width: 20%;
+    }
+    .instructions p {
+        font-size: 2.5vw;
+    }
+    .instructions {
+        margin-top: 5vh;
+    }
+    #playContainer img {
+        width: 20%;
+    }
+    #playContainer {
+        margin-top: 2vh;
+    }
 }

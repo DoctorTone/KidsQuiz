@@ -4,11 +4,13 @@
 
 <head lang="en">
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Kids Quiz</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link href="css/quizStyles.css?v=0.2" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.css?v=0.1">
+    <link href="css/quizStyles.css?v=0.8" rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -17,19 +19,31 @@
 
 </head>
 <body>
-    <div class="mainTitle centred">
-        <img src="images/roger.png">
-        <span>Roger Horsey's Quick Children's Quiz</span>
-    </div>
+    <div class="container page-wrapper">
+        <div class="row">
+            <div class="col-xs-1">
 
-    <div class="instructions centred">
-        <p>
-            Welcome to my quiz!<br>
-            Try and answer each question before the time runs out and you'll get to the next level!<br>
-            If not don't worry, you can always try again.
-        </p>
-        <div id="playContainer">
-            <img id="play" src="images/playButton.png">
+            </div>
+            <div class="col-xxs-12 col-xs-10">
+                <div class="mainTitle centred">
+                    <img src="images/roger.png">
+                    <span>Roger Horsey's Quick Children's Quiz</span>
+                </div>
+
+                <div class="instructions centred">
+                    <p>
+                        Welcome to my quiz!<br>
+                        Try and answer each question before the time runs out and you'll get to the next level!<br>
+                        If not don't worry, you can always try again.
+                    </p>
+                    <div id="playContainer">
+                        <img id="play" src="images/playButton.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-1">
+
+            </div>
         </div>
     </div>
 </body>
