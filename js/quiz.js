@@ -8,7 +8,7 @@
 $(document).ready( () => {
     let snort = new Howl(
         {
-            src: ["./sounds/horse-snort.webm", "./sounds/horse-snort.mp3"],
+            src: ["./sounds/horse-snort.wav", "./sounds/horse-snort.mp3"],
             autoplay: true
         }
     );

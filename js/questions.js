@@ -46,7 +46,8 @@ class QuestionManager {
 
     timeOut() {
         this.timerRunning = false;
-        $('#timeOut').show();
+        trot.stop();
+        soundManager.playSound("horse-wrong");
     }
 
     clearTimer() {
