@@ -9,6 +9,7 @@ class QuestionManager {
     constructor() {
         this.currentQuestion = 0;
         this.numAnswers = 3;
+        this.numQuestions = 10;
         this.updateTime = 100;
         this.currentTime = 0;
         this.totalTime = 30 * 1000;
@@ -137,12 +138,22 @@ class QuestionManager {
         correct ? $('#answerCorrect' + answer).show() : $('#answerWrong' + answer).show();
         if(correct) {
             ++this.correctAnswers;
+            if(this.correctAnswers === this.numQuestions) {
+                this.endGame();
+                return;
+            }
             this.showCorrectResponse(answer);
             soundManager.playSound("horse-correct");
         } else {
             soundManager.playSound("horse-wrong");
             this.stopGame(answer);
         }
+    }
+
+    endGame() {
+        trot.stop();
+        $('#quiz').hide();
+        $('#finished').show();
     }
 
     restart() {

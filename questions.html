@@ -13,7 +13,7 @@
     <script type="text/javascript" src="js/questionText.js"></script>
     <script type="text/javascript" src="js/howler.min.js"></script>
     <script type="text/javascript" src="js/soundManager.js?v=0.1"></script>
-    <script type="text/javascript" src="js/questions.js?v=0.9"></script>
+    <script type="text/javascript" src="js/questions.js?v=0.10"></script>
 
 </head>
 <body>
@@ -86,6 +86,16 @@
         <p id="numAnswers"></p>
         <p>question<span id="plural">s</span> in a row!!</p>
         <img id="tryAgain" src="images/tryAgainButton.png">
+    </div>
+
+    <div id="finished" class="noDisplay centred">
+        <div id="endText">
+            <p>Congratulations!</p>
+            <p>You correctly answered all the questions!!!</p>
+        </div>
+        <div id="endImageContainer">
+            <img src="images/fireworks-animated.gif">
+        </div>
     </div>
 
     <div id="restartContainer" class="infoPanel centred noDisplay">

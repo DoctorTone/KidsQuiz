@@ -8,13 +8,13 @@
 $(document).ready( () => {
     let snort = new Howl(
         {
-            src: ["./sounds/horse-snort.wav"],
+            src: ["./sounds/horse-snort.webm", "./sounds/horse-snort.mp3"],
             autoplay: true
         }
     );
     let whinny = new Howl(
         {
-            src: ["./sounds/horse-whinny.wav"]
+            src: ["./sounds/horse-whinny.mp3", "./sounds/horse-whinny.wav"]
         }
     );
 

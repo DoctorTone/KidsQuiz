@@ -11,12 +11,12 @@ class SoundManager {
 
     loadSounds(sounds) {
         let sound, soundInfo;
-        let path = "./sounds/", ext = ".wav";
+        let path = "./sounds/", ext1 = ".wav", ext2 = ".mp3";
         let numSounds = sounds.length;
         for(let i=0; i<numSounds; ++i) {
             sound = new Howl(
                 {
-                    src: [path + sounds[i] + ext]
+                    src: [path + sounds[i] + ext1, path + sounds[i] + ext2]
                 }
             );
             soundInfo = {};

@@ -121,7 +121,8 @@ body {
 #getReady img {
     width: 100%;
 }
-#summary {
+#summary,
+#finished {
     font-size: 3vw;
     color: white;
     padding: 10%;
