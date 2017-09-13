@@ -47,7 +47,7 @@ body {
 }
 .mainTitle p,
 .mainTitle span {
-    font-size: 4vw;
+    font-size: 7.5vw;
     font-family: 'salsaregular';
     color: white;
 }
@@ -87,11 +87,11 @@ body {
     margin: 0 20%;
 }
 .questionContainer {
-    margin: 20% 0 0 20%;
+    margin: 20% 0 0 5%;
 }
 .questionContainer p {
     font-family: "happy_monkeyregular";
-    font-size: 3.75vw;
+    font-size: 6vw;
     color: white;
 }
 .questionImage img {
@@ -104,10 +104,11 @@ body {
     margin-bottom: 12.5%;
 }
 .responseImage {
-    margin-top: 1.5%;
+    margin-top: 0%;
+    padding: 0 0 0 1%;
 }
 .responseImage img {
-    width: 250%;
+    width: 300%;
 }
 #playContainer {
     margin-top: 9vh;
@@ -153,6 +154,9 @@ body {
 #tryAgainContainer {
     margin-top: 15%;
 }
+#endImageContainer img {
+    width: 100%;
+}
 /* Media queries */
 @media (min-width: 568px) {
     .quizTitle p,
@@ -177,6 +181,10 @@ body {
     .mainTitle {
         margin-top: 20vh;
     }
+    .mainTitle p,
+    .mainTitle span {
+        font-size: 4vw;
+    }
     .questionContainer {
         margin-top: 5%;
     }
@@ -190,10 +198,16 @@ body {
         margin-top: 0.75%;
     }
     .responseImage img {
-        width: 135%;
+        width: 200%;
     }
     #summary {
         margin-top: 2%;
+    }
+    #finished {
+        margin-top: 1%;
+    }
+    #endImageContainer img {
+        width: 30%;
     }
 }
 @media (min-width: 768px) {
