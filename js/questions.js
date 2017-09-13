@@ -48,6 +48,7 @@ class QuestionManager {
         this.timerRunning = false;
         trot.stop();
         soundManager.playSound("horse-wrong");
+        $('#timeOut').show();
     }
 
     clearTimer() {
@@ -112,8 +113,9 @@ class QuestionManager {
             elem.show();
             this.clearTimer();
         }
-
+        
         setTimeout( () => {
+            $('#timeOut').hide();
             this.displayAnswers();
         }, this.restartWaitTime);
     }
