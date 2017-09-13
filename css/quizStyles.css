@@ -145,14 +145,14 @@ body {
     margin-top: 25%;
     font-size: 4vw;
     color: white;
-    padding: 10%;
+    padding: 5%;
     font-family: "happy_monkeyregular";
 }
 #summary img {
     width: 25%;
 }
 #tryAgainContainer {
-    margin-top: 15%;
+    margin-top: 5%;
 }
 #endImageContainer img {
     width: 100%;
@@ -179,7 +179,7 @@ body {
         margin-top: 2vh;
     }
     .mainTitle {
-        margin-top: 20vh;
+        margin-top: 1vh;
     }
     .mainTitle p,
     .mainTitle span {
