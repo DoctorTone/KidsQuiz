@@ -12,7 +12,8 @@ class QuestionManager {
         this.numQuestions = 10;
         this.updateTime = 100;
         this.currentTime = 0;
-        this.totalTime = 30 * 1000;
+        //DEBUG
+        this.totalTime = 3000 * 1000;
         this.questionWaitTime = 3 * 1000;
         this.timerRunning = true;
         this.timerMargin = this.updateTime * 5;
@@ -113,7 +114,7 @@ class QuestionManager {
             elem.show();
             this.clearTimer();
         }
-        
+
         setTimeout( () => {
             $('#timeOut').hide();
             this.displayAnswers();

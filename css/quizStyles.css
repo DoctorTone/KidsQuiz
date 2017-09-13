@@ -30,8 +30,20 @@ body {
 .indent {
     margin-left: 10%;
 }
-.mainTitle {
+.quizTitle {
     margin-top: 5vh;
+}
+.quizTitle p,
+.quizTitle span {
+    font-size: 4vw;
+    font-family: 'salsaregular';
+    color: white;
+}
+.quizTitle img {
+    width: 25%;
+}
+.mainTitle {
+    margin-top: 15vh;
 }
 .mainTitle p,
 .mainTitle span {
@@ -75,11 +87,11 @@ body {
     margin: 0 20%;
 }
 .questionContainer {
-    margin: 3% 0 1% 30%;
+    margin: 20% 0 0 20%;
 }
 .questionContainer p {
     font-family: "happy_monkeyregular";
-    font-size: 1.6vw;
+    font-size: 3.75vw;
     color: white;
 }
 .questionImage img {
@@ -88,8 +100,14 @@ body {
     left: 0;
     width: 100%;
 }
+.questionContainer .row {
+    margin-bottom: 12.5%;
+}
 .responseImage {
     margin-top: 1.5%;
+}
+.responseImage img {
+    width: 250%;
 }
 #playContainer {
     margin-top: 9vh;
@@ -123,21 +141,25 @@ body {
 }
 #summary,
 #finished {
-    font-size: 3vw;
+    margin-top: 25%;
+    font-size: 4vw;
     color: white;
     padding: 10%;
     font-family: "happy_monkeyregular";
 }
 #summary img {
-    width: 20%;
+    width: 25%;
+}
+#tryAgainContainer {
+    margin-top: 15%;
 }
 /* Media queries */
 @media (min-width: 568px) {
-    .mainTitle p,
-    .mainTitle span {
+    .quizTitle p,
+    .quizTitle span {
         font-size: 3vw;
     }
-    .mainTitle img {
+    .quizTitle img {
         width: 20%;
     }
     .instructions p {
@@ -154,10 +176,10 @@ body {
     }
 }
 @media (min-width: 768px) {
-    .mainTitle {
+    .quizTitle {
         margin-top: 15vh;
     }
-    .mainTitle img {
+    .quizTitle img {
         width: 25%;
     }
     .instructions p {
@@ -171,11 +193,11 @@ body {
     }
 }
 @media (min-width: 1200px) {
-    .mainTitle {
+    .quizTitle {
         margin-top: 5vh;
     }
-    .mainTitle p,
-    .mainTitle span {
+    .quizTitle p,
+    .quizTitle span {
         font-size: 2.5vw;
     }
     .instructions p {

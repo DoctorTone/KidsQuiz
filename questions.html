@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Questions</title>
 
     <link rel="stylesheet" href="css/bootstrap.css?v=0.1">
-    <link href="css/quizStyles.css?v=0.1" rel="stylesheet" type="text/css">
+    <link href="css/quizStyles.css?v=0.3" rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -32,10 +35,10 @@
                     <div class="questionContainer">
                         <div class="container">
                             <div class="row">
-                                <div class="col-xxs-1 centred">
+                                <div class="col-xxs-1">
                                     <p>1.</p>
                                 </div>
-                                <div class="col-xxs-4">
+                                <div class="col-xxs-6">
                                     <p id="answerText0"></p>
                                 </div>
                                 <div id="clickAnswer0" class="col-xxs-1 questionImage">
@@ -48,10 +51,10 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-xxs-1 centred">
+                                <div class="col-xxs-1">
                                     <p>2.</p>
                                 </div>
-                                <div class="col-xxs-4">
+                                <div class="col-xxs-6">
                                     <p id="answerText1"></p>
                                 </div>
                                 <div id="clickAnswer1" class="col-xxs-1 questionImage">
@@ -64,10 +67,10 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-xxs-1 centred">
+                                <div class="col-xxs-1">
                                     <p>3.</p>
                                 </div>
-                                <div class="col-xxs-4">
+                                <div class="col-xxs-6">
                                     <p id="answerText2"></p>
                                 </div>
                                 <div id="clickAnswer2" class="col-xxs-1 questionImage">
@@ -90,7 +93,9 @@
         <p>You correctly answered</p>
         <p id="numAnswers"></p>
         <p>question<span id="plural">s</span> in a row!!</p>
-        <img id="tryAgain" src="images/tryAgainButton.png">
+        <div id="tryAgainContainer">
+            <img id="tryAgain" src="images/tryAgainButton.png">
+        </div>
     </div>
 
     <div id="finished" class="noDisplay centred">
