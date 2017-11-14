@@ -4,6 +4,8 @@
 
 let trot, snort;
 let soundManager;
+let quizTimer;
+let counter = 0;
 
 class QuestionManager {
     constructor() {
@@ -15,18 +17,23 @@ class QuestionManager {
         //DEBUG
         this.totalTime = 20 * 1000;
         this.questionWaitTime = 3 * 1000;
-        this.timerRunning = true;
+        this.timerRunning = false;
         this.timerMargin = this.updateTime * 5;
         this.readyWaitTime = 1.5 * 1000;
         this.restartWaitTime = 1.5 * 1000;
         this.correctAnswers = 0;
+        quizTimer = setInterval( () => {
+            this.updateTimer();
+        }, this.updateTime);
     }
 
     start() {
+        this.timerRunning = true;
+        this.currentQuestion = 0;
+        this.currentTime = 0;
+        counter = 0;
+        $('#progressBar').width("0%");
         this.setupNextQuestion();
-        this.quizTimer = setInterval( () => {
-            this.updateTimer();
-        }, this.updateTime);
     }
 
     getUpdateTime() {
@@ -37,8 +44,10 @@ class QuestionManager {
         if(!this.timerRunning) return;
 
         this.currentTime += this.updateTime;
-        let progress = (this.currentTime / this.totalTime) * 100;
-        $('#progressBar').width(progress + "%");
+        this.progress = (this.currentTime / this.totalTime) * 100;
+        //DEBUG
+        console.log("counter = ", ++counter);
+        $('#progressBar').width(this.progress + "%");
         if(this.currentTime > (this.totalTime + this.timerMargin)) {
             this.timeOut();
             this.stopGame();
@@ -162,7 +171,6 @@ class QuestionManager {
 
     restart() {
         this.clearAnswers();
-        clearInterval(this.quizTimer);
         $('#mainTitle').show();
         $('#quiz').hide();
         $('#summary').hide();
