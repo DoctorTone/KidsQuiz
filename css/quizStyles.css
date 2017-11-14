@@ -125,9 +125,9 @@ body {
     width: 100%;
 }
 #timeOut {
-    top: 18%;
-    left: 40%;
-    width: 20%;
+    top: 25%;
+    left: 30%;
+    width: 40%;
 }
 #timeOut img {
     width: 75%;
@@ -209,19 +209,41 @@ body {
     #endImageContainer img {
         width: 30%;
     }
+    #timeOut {
+        top: 15%;
+        left: 37.5%;
+        width: 25%;
+    }
+}
+@media (min-width: 568px) and (orientation: portrait) {
+    .quizTitle span {
+        font-size: 4vw;
+    }
+    .quizTitle img {
+        width: 27.5%;
+    }
+    .instructions p {
+        font-size: 3.5vw;
+    }
+    #playContainer {
+        margin-top: 6vh;
+    }
 }
 @media (min-width: 768px) {
     .quizTitle {
-        margin-top: 15vh;
+        margin-top: 7.5vh;
     }
     .quizTitle img {
-        width: 25%;
+        width: 15%;
+    }
+    .quizTitle span {
+        font-size: 3.5vw;
     }
     .instructions p {
-        font-size: 3vw;
+        font-size: 2.25vw;
     }
     #playContainer img {
-        width: 25%;
+        width: 15%;
     }
     #playContainer {
         margin-top: 7vh;
