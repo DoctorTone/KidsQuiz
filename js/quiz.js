@@ -5,7 +5,6 @@
 let trot, snort;
 let soundManager;
 let quizTimer;
-let counter = 0;
 
 class QuestionManager {
     constructor() {
@@ -28,12 +27,12 @@ class QuestionManager {
     }
 
     start() {
-        this.timerRunning = true;
         this.currentQuestion = 0;
         this.currentTime = 0;
-        counter = 0;
+        this.correctAnswers = 0;
         $('#progressBar').width("0%");
         this.setupNextQuestion();
+        this.timerRunning = true;
     }
 
     getUpdateTime() {
@@ -45,10 +44,11 @@ class QuestionManager {
 
         this.currentTime += this.updateTime;
         this.progress = (this.currentTime / this.totalTime) * 100;
-        //DEBUG
-        console.log("counter = ", ++counter);
         $('#progressBar').width(this.progress + "%");
+        //DEBUG
+        console.log("Progress = ", this.progress);
         if(this.currentTime > (this.totalTime + this.timerMargin)) {
+            $('#progressBar').width("0%");
             this.timeOut();
             this.stopGame();
         }
