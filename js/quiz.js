@@ -164,6 +164,7 @@ class QuestionManager {
     }
 
     endGame() {
+        this.timerRunning = false;
         trot.stop();
         $('#quiz').hide();
         $('#finished').show();
