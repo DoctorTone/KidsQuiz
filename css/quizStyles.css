@@ -141,7 +141,7 @@ body {
 #summary,
 #finished {
     margin-top: 25%;
-    font-size: 4vw;
+    font-size: 5.5vw;
     color: white;
     padding: 5%;
     font-family: "happy_monkeyregular";
@@ -151,6 +151,9 @@ body {
 }
 #tryAgainContainer {
     margin-top: 5%;
+}
+#tryAgainContainer img {
+    width: 40%;
 }
 #endImageContainer img {
     width: 100%;
@@ -184,16 +187,16 @@ body {
     }
     .questionTitle p,
     .questionTitle span {
-        font-size: 4vw;
+        font-size: 3.5vw;
     }
     .questionContainer {
-        margin-top: 5%;
+        margin-top: 3.5%;
     }
     .questionContainer p {
         font-size: 3.2vw;
     }
     .questionContainer .row {
-        margin-bottom: 3.5%;
+        margin-bottom: 2%;
     }
     .responseImage {
         margin-top: 0.75%;
@@ -202,7 +205,11 @@ body {
         width: 200%;
     }
     #summary {
-        margin-top: 2%;
+        margin-top: 1%;
+        font-size: 4vw;
+    }
+    #summary img {
+        width: 25%;
     }
     #finished {
         margin-top: 1%;
@@ -210,10 +217,16 @@ body {
     #endImageContainer img {
         width: 30%;
     }
+    #tryAgainContainer img {
+        width: 20%;
+    }
     #timeOut {
         top: 15%;
         left: 37.5%;
         width: 25%;
+    }
+    #endText p {
+        font-size: 3vw;
     }
 }
 @media (min-width: 568px) and (orientation: portrait) {
