@@ -273,6 +273,15 @@ body {
     #tryAgainContainer img {
         width: 30%;
     }
+    #endText p {
+        font-size: 5vw;
+    }
+    #endImageContainer img {
+        width: 75%;
+    }
+    #finished {
+        margin-top: 20%;
+    }
 }
 @media (min-width: 768px) {
     .quizTitle {
