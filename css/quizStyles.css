@@ -317,6 +317,11 @@ body {
         width: 20%;
     }
 }
+@media (min-width: 992px) {
+    .questionTitle {
+        margin-top: 3vh;
+    }
+}
 @media (min-width: 1200px) {
     .quizTitle {
         margin-top: 5vh;
