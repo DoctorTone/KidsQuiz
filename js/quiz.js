@@ -46,7 +46,7 @@ class QuestionManager {
         this.progress = (this.currentTime / this.totalTime) * 100;
         $('#progressBar').width(this.progress + "%");
         //DEBUG
-        console.log("Progress = ", this.progress);
+        //console.log("Progress = ", this.progress);
         if(this.currentTime > (this.totalTime + this.timerMargin)) {
             $('#progressBar').width("0%");
             this.timeOut();
