@@ -231,16 +231,47 @@ body {
 }
 @media (min-width: 568px) and (orientation: portrait) {
     .quizTitle span {
-        font-size: 4vw;
+        font-size: 5vw;
     }
     .quizTitle img {
         width: 27.5%;
+    }
+    .questionTitle p,
+    .questionTitle span {
+        font-size: 6vw;
+    }
+    .questionTitle {
+        margin-top: 5vh;
+    }
+    .questionContainer {
+        margin-top: 10%;
+    }
+    .questionContainer p {
+        font-size: 4.5vw;
+    }
+    .questionContainer .row {
+        margin-bottom: 7.5%;
+    }
+    .instructions {
+        margin-top: 5vh;
     }
     .instructions p {
         font-size: 3.5vw;
     }
     #playContainer {
         margin-top: 6vh;
+    }
+    #playContainer img {
+        width: 25%;
+    }
+    #summary {
+        margin-top: 7.5%;
+    }
+    #summary p {
+        font-size: 5vw;
+    }
+    #tryAgainContainer img {
+        width: 30%;
     }
 }
 @media (min-width: 768px) {
