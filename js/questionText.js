@@ -6,7 +6,7 @@
 
 let questionText = [
     {
-        question: "What is the capital of England ?",
+        question: "What is the capital of England?",
         answers: ["London", "Paris", "New York"],
         answer: 0
     },
@@ -16,9 +16,9 @@ let questionText = [
         answer: 2
     },
     {
-        question: "What is the square root of 9?",
-        answers: ["1", "81", "3"],
-        answer: 2
+        question: "Who painted the Mona Lisa?",
+        answers: ["Rembrandt", "Da Vinci", "Turner"],
+        answer: 1
     },
     {
         question: "What is the fastest animal?",
@@ -26,33 +26,33 @@ let questionText = [
         answer: 0
     },
     {
-        question: "What is the capital of England ?",
-        answers: ["London", "Paris", "New York"],
+        question: "What outlaw lived in Sherwood Forest?",
+        answers: ["Al Capone", "Robin Hood", "Dick Turpin"],
+        answer: 1
+    },
+    {
+        question: "What is the tallest mountain in the world?",
+        answers: ["Everest", "Ben Nevis", "K2"],
         answer: 0
     },
     {
-        question: "What is the closest planet to the Sun?",
-        answers: ["Earth", "Saturn", "Mercury"],
+        question: "How many sides does a hexagon have?",
+        answers: ["4", "8", "6"],
         answer: 2
     },
     {
-        question: "What is the square root of 9?",
-        answers: ["1", "81", "3"],
+        question: "What colour is an emerald?",
+        answers: ["White", "Red", "Green"],
         answer: 2
     },
     {
-        question: "What is the fastest animal?",
-        answers: ["Cheetah", "Horse", "Elephant"],
-        answer: 0
-    },
-    {
-        question: "What is the square root of 9?",
-        answers: ["1", "81", "3"],
+        question: "What school did Harry Potter go to?",
+        answers: ["Eton", "Oxford", "Hogwarts"],
         answer: 2
     },
     {
-        question: "What is the fastest animal?",
-        answers: ["Cheetah", "Horse", "Elephant"],
+        question: "What is a baby goat called?",
+        answers: ["Kid", "Lad", "Calf"],
         answer: 0
     }
 ];
