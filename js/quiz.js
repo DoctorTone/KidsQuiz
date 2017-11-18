@@ -180,6 +180,8 @@ class QuestionManager {
 }
 
 $(document).ready( ()=> {
+    let playing = false;
+
     snort = new Howl(
         {
             src: ["./sounds/horse-snort.wav", "./sounds/horse-snort.mp3"],
@@ -207,6 +209,12 @@ $(document).ready( ()=> {
     soundManager.loadSounds(["horse-correct", "horse-wrong"]);
 
     $('#play').on("click", () => {
+        if(playing) {
+            //console.log("Playing");
+            return;
+        }
+
+        playing = true;
         whinny.play();
         whinny.on("end", () => {
             $('#mainTitle').hide();
@@ -222,5 +230,7 @@ $(document).ready( ()=> {
 
     $('#tryAgain').on("click", () => {
         qManager.restart();
+        playing = false;
+        //console.log("Stopped playing");
     });
 });
