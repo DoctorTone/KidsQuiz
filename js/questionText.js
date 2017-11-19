@@ -32,27 +32,27 @@ let questionText = [
     },
     {
         question: "What is the tallest mountain in the world?",
-        answers: ["Everest", "Ben Nevis", "K2"],
-        answer: 0
+        answers: ["K2", "Ben Nevis", "Everest"],
+        answer: 2
     },
     {
         question: "How many sides does a hexagon have?",
-        answers: ["4", "8", "6"],
-        answer: 2
+        answers: ["6", "8", "4"],
+        answer: 0
     },
     {
         question: "What colour is an emerald?",
-        answers: ["White", "Red", "Green"],
-        answer: 2
+        answers: ["White", "Green", "Red"],
+        answer: 1
     },
     {
         question: "What school did Harry Potter go to?",
-        answers: ["Eton", "Oxford", "Hogwarts"],
-        answer: 2
+        answers: ["Eton", "Hogwarts", "Oxford"],
+        answer: 1
     },
     {
         question: "What is a baby goat called?",
-        answers: ["Kid", "Lad", "Calf"],
-        answer: 0
+        answers: ["Calf", "Lad", "Kid"],
+        answer: 2
     }
 ];
