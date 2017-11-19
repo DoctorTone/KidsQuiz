@@ -13,6 +13,7 @@ class QuestionManager {
         this.numQuestions = 10;
         this.updateTime = 100;
         this.currentTime = 0;
+        this.buttonPressed = false;
         //DEBUG
         this.totalTime = 20 * 1000;
         this.questionWaitTime = 3 * 1000;
@@ -30,6 +31,7 @@ class QuestionManager {
         this.currentQuestion = 0;
         this.currentTime = 0;
         this.correctAnswers = 0;
+        this.buttonPressed = false;
         $('#progressBar').width("0%");
         this.setupNextQuestion();
         this.timerRunning = true;
@@ -105,6 +107,7 @@ class QuestionManager {
         elem.show();
         this.clearTimer();
         setTimeout( () => {
+            this.buttonPressed = false;
             this.nextQuestion();
         }, this.readyWaitTime);
     }
@@ -142,6 +145,13 @@ class QuestionManager {
     }
 
     checkAnswer(answerID) {
+        //Check for multiple button presses
+        if(this.buttonPressed) {
+            //console.log("Button already pressed");
+            return;
+        }
+        this.buttonPressed = true;
+
         //Get answer number
         let answer = answerID.match(/\d/g);
         answer = answer.join("");
